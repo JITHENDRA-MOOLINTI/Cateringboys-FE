@@ -13,7 +13,7 @@ findAccountBtn.addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch(`http://localhost:8080/cateringboys?email=${email}`);
+    const response = await fetch(`https://cateringboys-be.onrender.com/cateringboys?email=${email}`);
     const data = await response.json();
    
     console.log(data);
@@ -53,7 +53,7 @@ updatePasswordBtn.addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch(`http://localhost:8080/cateringboys/user/update-password`, {
+    const response = await fetch(`https://cateringboys-be.onrender.com/cateringboys/user/update-password`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email,newPassword })
