@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     try {
       const response = await fetch(
-        `http://localhost:8080/cateringboys/admin/events?email=${encodeURIComponent(adminEmail)}`
+        `https://cateringboys-be.onrender.com/cateringboys/admin/events?email=${encodeURIComponent(adminEmail)}`
       );
       if (!response.ok) throw new Error("Failed to fetch events");
       const events = await response.json();
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.querySelector(".delete-btn").addEventListener("click", async () => {
       if (confirm(`Delete "${ev.title}"?`)) {
         try {
-          await fetch(`http://localhost:8080/cateringboys/admin/${ev.id}?email=${encodeURIComponent(adminEmail)}`, { method: "DELETE" });
+          await fetch(`https://cateringboys-be.onrender.com/cateringboys/admin/${ev.id}?email=${encodeURIComponent(adminEmail)}`, { method: "DELETE" });
           alert("Event deleted successfully!");
           fetchEvents();
         } catch {
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let response;
       if (editMode) {
         const id = form.eventId.value;
-        response = await fetch(`http://localhost:8080/cateringboys/admin/update/${id}`, {
+        response = await fetch(`https://cateringboys-be.onrender.com/cateringboys/admin/update/${id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(eventData),
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!response.ok) throw new Error("Update failed");
         alert("✅ Event successfully updated!");
       } else {
-        response = await fetch(`http://localhost:8080/cateringboys/admin?email=${encodeURIComponent(adminEmail)}`, {
+        response = await fetch(`https://cateringboys-be.onrender.com/cateringboys/admin?email=${encodeURIComponent(adminEmail)}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(eventData),
