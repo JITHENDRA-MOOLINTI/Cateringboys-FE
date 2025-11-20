@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const eventsContainer = document.getElementById("events-container");
   
   // Fetch events created by admin
-  fetch(`http://localhost:8080/cateringboys/user/${userId}`) // Replace with your backend URL
+  fetch(`https://cateringboys-be.onrender.com/cateringboys/user/${userId}`) // Replace with your backend URL
     .then(res => {
       if (!res.ok) throw new Error("Failed to fetch events");
       return res.json();
@@ -54,7 +54,7 @@ document.getElementById("contact-link").addEventListener("click",()=>{
 
 // Function to cancel booking
 function cancelBooking(bookingId) {
-  fetch(`http://localhost:8080/cateringboys/user/${bookingId}`, { method: "DELETE" })
+  fetch(`https://cateringboys-be.onrender.com/cateringboys/user/${bookingId}`, { method: "DELETE" })
     .then(res => {
       if (!res.ok) throw new Error("Failed to cancel booking");
       return res.text();
