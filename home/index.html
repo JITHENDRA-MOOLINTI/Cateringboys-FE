@@ -4,143 +4,148 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CATERING BOYS</title>
+
+  <!-- Correct CSS path (index.html and index.css both in home/) -->
   <link rel="stylesheet" href="index.css" />
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
- <nav>
+<nav>
   <div class="logo">CATERING BOYS</div>
   
-  <!-- Menu Links -->
   <ul class="nav-links" id="nav-links">
     <li><a href="#">Home</a></li>
     <li><a href="#description">About</a></li>
     <li><a href="#events">Events</a></li>
-     <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><button class="auth-btn" id="auth-btn">Login</button></li>
-    <!-- Close button (mobile only) -->
     <li class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></li>
   </ul>
 
-  <!-- Hamburger Menu Icon (Mobile) -->
   <div class="menu-icon" id="menu-icon">
     <i class="fa-solid fa-bars"></i>
   </div>
 </nav>
 
+<!-- Hero Section -->
+<section class="hero">
+  <!-- Corrected image path: inside home/images -->
+  <img src="images/foodserving.avif" alt="Catering Service">
+  <div class="hero-text">
+    <h1>We are Servicing the Food</h1>
+    <p>Making your special events delicious, elegant, and unforgettable.</p>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="/images/foodserving.avif" alt="Catering Service">
-    <div class="hero-text">
-      <h1>We are Servicing the Food</h1>
-      <p>Making your special events delicious, elegant, and unforgettable.</p>
-    </div>
-  </section>
+<!-- Description -->
+<section class="description" id="description">
+  <h2>Our Catering</h2>
+  <p>
+    Catering Boys is your one-stop solution for all event catering services — 
+    weddings, birthdays, corporate parties, engagements, or housewarmings. 
+    We deliver delicious food and exceptional service for every occasion.
+  </p>
+</section>
 
-  <!-- Description -->
-  <section class="description" id="description">
-    <h2>Our Catering</h2>
-    <p>
-      Catering Boys is your one-stop solution for all event catering services — 
-      weddings, birthdays, corporate parties, engagements, or housewarmings. 
-      We deliver delicious food and exceptional service for every occasion.
-    </p>
-  </section>
+<!-- Events Section -->
+<section class="events" id="events">
+  <h2>Our Event Highlights</h2>
+  <div class="card-container">
 
-  <!-- Events Section -->
-  <section class="events" id="events">
-    <h2>Our Event Highlights</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="/images/wedding.avif" alt="Wedding Event">
-        <div class="card-content">
-          <h3>Wedding Events</h3>
-          <p>Elegant dining and personalized service for your big day.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="/images/birthday.avif" alt="Birthday Party">
-        <div class="card-content">
-          <h3>Birthday Celebrations</h3>
-          <p>Fun-filled food and themes to make your birthday special.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="/images/corporate.webp" alt="Corporate Party">
-        <div class="card-content">
-          <h3>Corporate Parties</h3>
-          <p>Professional catering for business meetings and events.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="/images/engagement.webp" alt="Engagement Event">
-        <div class="card-content">
-          <h3>Engagement Events</h3>
-          <p>Celebrate your love story with elegant setups and great food.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="/images/housewarming.webp" alt="Housewarming Event">
-        <div class="card-content">
-          <h3>Housewarming Ceremonies</h3>
-          <p>Make your new beginning memorable with delicious catering.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="/images/festivals.jpg" alt="Festivals Event">
-        <div class="card-content">
-          <h3>Festivals Ceremonies</h3>
-          <p>Celebrate festivals with joy and mouth-watering dishes.</p>
-        </div>
+    <div class="card">
+      <img src="images/wedding.avif" alt="Wedding Event">
+      <div class="card-content">
+        <h3>Wedding Events</h3>
+        <p>Elegant dining and personalized service for your big day.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Reviews Section -->
-  <section class="reviews">
-    <h2>Customer Reviews</h2>
-    <div class="review-container">
-      <div class="review">
-        <p>“Amazing service! Food was delicious, and the staff was very friendly. Highly recommend Catering Boys.”</p>
-        <h4>- Ramesh Kumar</h4>
-        <div class="stars">⭐️⭐️⭐️⭐️☆ (4.1)</div>
-      </div>
-
-      <div class="review">
-        <p>“They handled our wedding perfectly! Great taste, professional setup, and smooth service.”</p>
-        <h4>- Priya Sharma</h4>
-        <div class="stars">⭐️⭐️⭐️⭐️☆ (4.1)</div>
+    <div class="card">
+      <img src="images/birthday.avif" alt="Birthday Party">
+      <div class="card-content">
+        <h3>Birthday Celebrations</h3>
+        <p>Fun-filled food and themes to make your birthday special.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <div class="card">
+      <img src="images/corporate.webp" alt="Corporate Party">
+      <div class="card-content">
+        <h3>Corporate Parties</h3>
+        <p>Professional catering for business meetings and events.</p>
+      </div>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 CATERING BOYS. All rights reserved.</p>
-    <p>Email: cateringboys@gmail.com | Phone: +91 98765 43210</p>
-    <p>Follow us on Instagram & Facebook</p>
-  </footer>
+    <div class="card">
+      <img src="images/engagement.webp" alt="Engagement Event">
+      <div class="card-content">
+        <h3>Engagement Events</h3>
+        <p>Celebrate your love story with elegant setups and great food.</p>
+      </div>
+    </div>
 
-  <script src="index.js"></script>
+    <div class="card">
+      <img src="images/housewarming.webp" alt="Housewarming Event">
+      <div class="card-content">
+        <h3>Housewarming Ceremonies</h3>
+        <p>Make your new beginning memorable with delicious catering.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/festivals.jpg" alt="Festivals Event">
+      <div class="card-content">
+        <h3>Festivals Ceremonies</h3>
+        <p>Celebrate festivals with joy and mouth-watering dishes.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="review-container">
+    <div class="review">
+      <p>“Amazing service! Food was delicious, and the staff was very friendly. Highly recommend Catering Boys.”</p>
+      <h4>- Ramesh Kumar</h4>
+      <div class="stars">⭐️⭐️⭐️⭐️☆ (4.1)</div>
+    </div>
+
+    <div class="review">
+      <p>“They handled our wedding perfectly! Great taste, professional setup, and smooth service.”</p>
+      <h4>- Priya Sharma</h4>
+      <div class="stars">⭐️⭐️⭐️⭐️☆ (4.1)</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 CATERING BOYS. All rights reserved.</p>
+  <p>Email: cateringboys@gmail.com | Phone: +91 98765 43210</p>
+  <p>Follow us on Instagram & Facebook</p>
+</footer>
+
+<!-- Correct JS path -->
+<script src="index.js"></script>
+
 </body>
 </html>
