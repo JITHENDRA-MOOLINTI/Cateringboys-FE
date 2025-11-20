@@ -15,7 +15,7 @@ document.querySelector("#attendance").addEventListener("click",(e)=>{
   // ✅ Fetch Bookings
   async function fetchBookings() {
     try {
-      const response = await fetch(`http://localhost:8080/cateringboys/admin/${eventId}`);
+      const response = await fetch(`https://cateringboys-be.onrender.com/cateringboys/admin/${eventId}`);
       if (!response.ok) throw new Error("Failed to load bookings");
       const bookings = await response.json();
       
