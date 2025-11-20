@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("events-link").href=`../admindash/index.html`;
 
   // Fetch bookings for this event
-  fetch(`http://localhost:8080/cateringboys/admin/${eventId}`)
+  fetch(`https://cateringboys-be.onrender.com/cateringboys/admin/${eventId}`)
     .then(res => {
       if (!res.ok) throw new Error("Failed to fetch bookings");
       return res.json();
@@ -88,7 +88,7 @@ function saveUpdatedAttendance(bookingId, eventId) {
     return;
   }
 
-  fetch(`http://localhost:8080/cateringboys/admin/${bookingId}?attendanceStatus=${status}&attendedAt=${attendedAt}`, {
+  fetch(`https://cateringboys-be.onrender.com/cateringboys/admin/${bookingId}?attendanceStatus=${status}&attendedAt=${attendedAt}`, {
     method: "PUT"
   })
     .then(res => {
