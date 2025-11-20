@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const eventsContainer = document.getElementById("events-container");
   
   // Fetch events created by admin
-  fetch(`http://localhost:8080/cateringboys/user/events/${userId}`) // Replace with your backend URL
+  fetch(`https://cateringboys-be.onrender.com/cateringboys/user/events/${userId}`) // Replace with your backend URL
     .then(res => {
       if (!res.ok) throw new Error("Failed to fetch events");
       return res.json();
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to book an event
 function bookEvent(eventId) {
-  fetch(`http://localhost:8080/cateringboys/user/${eventId}/${userId}`, { method: "POST" })
+  fetch(`https://cateringboys-be.onrender.com/cateringboys/user/${eventId}/${userId}`, { method: "POST" })
     .then(async res => {
       // Parse JSON even if response is not OK
       const data = await res.json();
