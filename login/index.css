@@ -1,0 +1,248 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Full-page body style */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Centered Gradient Background */
+body {
+  background: linear-gradient(135deg, #302dcd, #fbc531);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Wrapper */
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Login Box */
+.login-box {
+  background: #0d2fd8;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #f7b731;
+  outline: none;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #f7b731;
+  border: none;
+  border-radius: 8px;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e6a51f;
+}
+
+/* Footer text below login button */
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.login-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ---------------- RESPONSIVENESS ---------------- */
+
+/* ✅ 768px (Tablets) */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 35px 25px;
+  }
+
+  .login-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-btn {
+    font-size: 1.1rem;
+  }
+}
+
+/* ✅ 425px (Large Phones) */
+@media (max-width: 425px) {
+  body {
+    align-items: flex-start;   /* Start from top */
+    padding-top: 40px;         /* Add space above */
+    overflow-y: auto;          /* Allow vertical scroll if needed */
+  }
+
+  .login-wrapper {
+    padding: 10px;
+    width: 85%;
+  }
+
+  .login-box {
+    padding: 25px 18px;
+    border-radius: 10px;
+    transform: scale(0.95);    /* Slightly smaller overall */
+  }
+
+  .login-box h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .login-btn {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .login-footer {
+    font-size: 0.85rem;
+  }
+}
+
+/* ✅ 375px (Medium Phones like iPhone X) */
+@media (max-width: 375px) {
+  body {
+    align-items: flex-start;
+    padding-top: 30px;
+    overflow-y: auto;
+  }
+
+  .login-wrapper {
+    padding: 8px;
+  }
+
+  .login-box {
+    padding: 20px 15px;
+    border-radius: 10px;
+    transform: scale(0.9);     /* Smaller */
+  }
+
+  .login-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .login-btn {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .login-footer {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ✅ 320px (Small Phones) */
+@media (max-width: 320px) {
+  .login-box {
+    padding: 20px 15px;
+  }
+
+  .login-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .login-btn {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .login-footer {
+    font-size: 0.8rem;
+  }
+}
+
+#toast-container {
+  position: fixed;   /* Fixed relative to viewport */
+  top: 20px;         /* Distance from top */
+  left: 20px;       /* Distance from right */
+  z-index: 9999;     /* On top of everything */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;         /* Space between multiple toasts */
+}

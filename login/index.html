@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering Boys - Login</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="login-form">
+        <!-- Email -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="Enter your email" 
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            title="Enter a valid email, e.g., jithu224@gmail.com">
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <!-- Role -->
+        <div class="input-group">
+          <label for="role">Role</label>
+          <select id="role" required>
+            <option value="USER">USER</option>
+            <option value="ADMIN">ADMIN</option>
+          </select>
+        </div>
+         <p id="result"></p>
+        <!-- Login Button -->
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <!-- Forgot Password + Signup -->
+      <div class="login-footer">
+        <a href="../forgot/index.html" class="forgot-password">Forgot Password?</a>
+        <p>Don't have an account? <a href="../signup/index.html" class="signup-link">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>

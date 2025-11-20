@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Catering Boys</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav>
+    <div class="logo">CATERING BOYS</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/index.html">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a id="contact-link">Contact</a></li>
+      <li><button class="logout-btn">Logout</button></li>
+      <li class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></li>
+    </ul>
+    <div class="menu-icon" id="menu-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- 🔹 Scrolling Welcome Bar -->
+  <div class="scroll-bar">
+    <marquee behavior="scroll" direction="left" id="marquee"></marquee>
+  </div>
+
+  <!-- 🔹 Events Section -->
+  <section class="events-section">
+    <h2 id="events">Events</h2>
+    <div id="event-container" class="event-container"></div>
+  </section>
+
+  <!-- 🔹 Floating Add Button -->
+  <button id="addEventBtn" class="add-btn">+</button>
+
+  <!-- 🔹 Modal for Add / Update -->
+  <div class="modal" id="eventModal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add New Event</h2>
+      <form id="eventForm">
+        <input type="hidden" id="eventId">
+        <input type="text" id="title" placeholder="Event Title" required>
+        <input type="text" id="venue" placeholder="Venue" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+        <input type="number" id="requiredboys" placeholder="Required Boys" required>
+        <input type="number" id="amountPerBoy" placeholder="Amount per Boy" min="100" required>
+        <div class="modal-buttons">
+          <button type="submit" class="save-btn">Save</button>
+          <button type="button" id="closeModal" class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

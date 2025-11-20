@@ -1,0 +1,279 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f7b731;
+  letter-spacing: 1px;
+}
+
+/* Menu Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f7b731;
+}
+
+/* Login Button */
+.logout-btn {
+  padding: 8px 20px;
+  background-color: #0e47cd;
+  color: #fffefe;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #e6a51f;
+}
+
+/* Hamburger */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Menu */
+.close-btn {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #222;
+    text-align: center;
+    gap: 25px;
+    padding-top: 60px;
+    transform: translateX(100%);
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* Scroll Bar */
+.scroll-bar {
+  color: #000;
+  padding: 10px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+/* Events Section */
+.events-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.events-section h2 {
+  color: #ff9800;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Event Cards */
+.event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.event-card {
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+}
+
+.event-details {
+  padding: 15px;
+  text-align: left;
+}
+
+.event-details h3 {
+  color: #ff9800;
+  margin-bottom: 8px;
+}
+
+.event-details p {
+  margin: 5px 0;
+}
+
+/* Buttons */
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px;
+}
+
+.update-btn, .delete-btn, .bookings-btn {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.update-btn { background-color: #4caf50; }
+.delete-btn { background-color: #f44336; }
+.bookings-btn { background-color: #0052eb; }
+
+/* Add Button */
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.add-btn:hover { background-color: #e68900; }
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.modal-content h2 {
+  color: #ff9800;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-content input, .modal-content textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea { resize: none; height: 70px; }
+
+.modal-buttons {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 10px;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cancel-btn:hover {
+  background-color: #6b3030;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

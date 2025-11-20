@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard | Catering Boys</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+  <nav>
+    <div class="logo">CATERING BOYS</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/home/index.html">Home</a></li>
+       <li><a id="bookings-link">Bookings</a></li>
+      <li><a id="contact-link">Contact</a></li>
+      <li><button class="logout-btn">Logout</button></li>
+      <li class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></li>
+    </ul>
+    <div class="menu-icon" id="menu-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+   <!-- 🔹 Scrolling Welcome Bar -->
+  <div class="scroll-bar">
+    <marquee behavior="scroll" direction="left" id="marquee"></marquee>
+  </div>
+   
+  <main>
+    <h1>Available Events</h1>
+    <div id="events-container" class="events-container"></div>
+  </main>
+  
+  <script src="index.js"></script>
+</body>
+</html>

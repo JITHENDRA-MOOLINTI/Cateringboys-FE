@@ -1,0 +1,256 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f7b731;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f7b731;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 8px 20px;
+  background-color: #0e47cd;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.logout-btn:hover {
+  background-color: #e6a51f;
+}
+
+/* Hamburger for mobile */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #222;
+    text-align: center;
+    gap: 25px;
+    padding-top: 60px;
+    transform: translateX(100%);
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin: 20px 0 20px;
+  color: #ff9800;
+}
+
+.container {
+  margin: 30px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow-x: auto; /* ✅ Enables horizontal scroll for small screens */
+}
+.container {
+  margin: 30px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 95%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* ✅ Make table fluid */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Allows columns to auto-adjust width */
+}
+
+table th, table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  word-wrap: break-word; /* Allow text wrapping */
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
+
+/* ✅ Resize controls when screen shrinks */
+.status-select {
+  width: 100%;
+  max-width: 160px;
+  height: 38px;
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+button.save-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.save-btn:hover {
+  background-color: #218838;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  table th, table td {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .status-select {
+    max-width: 130px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .status-select {
+    max-width: 110px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  button.save-btn {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  table th, table td {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .status-select {
+    max-width: 100px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  button.save-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+.save-btn, .update-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.update-btn {
+  background: #007bff;
+  margin-left: 5px;
+}
+.save-btn[disabled] {
+  background: #aaa;
+  cursor: not-allowed;
+}

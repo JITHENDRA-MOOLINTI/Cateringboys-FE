@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Password</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+  <h2>Forgot Password</h2>
+
+  <!-- Step 1: Enter email -->
+  <input type="email" id="email" placeholder="Enter your registered email">
+  <button id="findAccountBtn">Find Account</button>
+
+  <!-- Step 2: Show account info and reset password -->
+  <div id="accountInfo" style="display:none;">
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="userEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+
+    <input type="password" id="newPassword" placeholder="Enter new password">
+    <input type="password" id="confirmPassword" placeholder="Confirm new password">
+    <button id="updatePasswordBtn">Update Password</button>
+  </div>
+
+  <p id="result"></p>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
