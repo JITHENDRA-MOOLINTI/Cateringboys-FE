@@ -9,7 +9,7 @@ loginForm.addEventListener('submit', async (e) => {
   const output = document.getElementById("result");
 
   try {
-    const response = await fetch('http://localhost:8080/cateringboys/login', {
+    const response = await fetch('https://cateringboys-be.onrender.com/cateringboys/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password, role })
