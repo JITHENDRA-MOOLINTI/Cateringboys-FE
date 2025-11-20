@@ -9,7 +9,7 @@ form.addEventListener("submit", async (e) => {
   const message = document.getElementById("message").value.trim();
 
   try {
-    const response = await fetch("http://localhost:8080/cateringboys/contact", {
+    const response = await fetch("https://cateringboys-be.onrender.com/cateringboys/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, message })
